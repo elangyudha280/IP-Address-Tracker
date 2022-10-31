@@ -17,6 +17,7 @@ main.template {
   position: relative;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
   top: 0;
   left: 0;
 }
@@ -141,9 +142,17 @@ section.map {
   position: relative;
   width: 100%;
   height: 55%;
-  background: cyan;
   z-index: 1;
+  overflow: hidden;
 }
+
+.map iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* media < 1000px */
 @media screen and (max-width: 1000px) {
   .info-user-container {
     width: 100%;
@@ -194,5 +203,39 @@ section.map {
 @media screen and (max-width: 350px) {
   .header .title-ip {
     font-size: 1.4em;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .header {
+    height: 280px;
+  }
+  section.map {
+    height: 500px;
+  }
+  main.template {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) and (max-height: 750px) {
+  .header {
+    height: 400px;
+  }
+  section.map {
+    height: 800px;
+  }
+  main.template {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
   }
 }
